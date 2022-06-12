@@ -1,4 +1,4 @@
-package chapter02
+package chapter02_var_val_identifier_String
 
 import chapter01.Student
 
