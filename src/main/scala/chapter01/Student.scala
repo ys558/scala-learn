@@ -1,6 +1,7 @@
 package chapter01
 
-class Student(name: String, age: Int) {
+// ()里的构造函数，可直接定义为变量(var)或常量(val)，给外部传入的值给一定的限制：
+class Student(val name: String,  var age: Int) {
   def printInfo(): Unit = {
     println(name + " " + age + " " + "in School: " + Student.school)
   }
