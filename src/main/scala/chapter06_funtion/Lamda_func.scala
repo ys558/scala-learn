@@ -25,7 +25,6 @@ object Lamda_func {
     // 3.4 newFunc如果只有一个操作，例如println(), 传参及箭头也 xx =>，及通配符下划线_ 均可省略
     newFunc(println) // yyyyy
 
-
     // 4. 实例练习：两数操作：
     def dualNums(fn: (Int, Int) => Int): Int = {
       fn(1, 2)
