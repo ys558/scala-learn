@@ -8,6 +8,10 @@ object string {
     var age = 18
     printf("%s的年龄为%d\n", name, age)
 
+    // 声明时也可多个变量一起声明：
+    val x, y: String = "String"
+    println(s"$x, $y")
+
     // 字符串模板: s"", f"", raw"", """""""
     println(s"${name}的年龄为：${age}")
     val num = 2.3456
