@@ -1,5 +1,9 @@
 package chapter04_dataType
 
+// 整体导入scala内置的数学操作包：._
+// 等同于 import scala.math._
+import math._
+
 object calculations {
   def main(args: Array[String]): Unit = {
     val r1 = 10 / 3
@@ -29,5 +33,14 @@ object calculations {
     // >> 右移操作，相当于 除以2的n次方
     // 右移移3，变成 111 (2)
     println(v >> 3) // 7
+
+    // scala中，直接调用方法，而不像java一样进行强制类型转换：
+    // ! 一般来讲，没有带括号()的方法，不改变当前对象，
+    val d = 99.44.toInt
+    println(d) // 99
+
+    // 一些常用的数学操作：
+    val a, b, c = sqrt(2); pow(2,4); min(3, Pi)
+    println(a, b, c) // (1.4142135623730951,1.4142135623730951,1.4142135623730951)
   }
 }

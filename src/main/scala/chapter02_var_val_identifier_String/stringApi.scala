@@ -13,5 +13,20 @@ object stringApi {
     println(b) // lo
     val c = "好好学习".intersect("好好工作")
     println(c) // 好好
+
+    // apply方法：
+    // 例如输出字符串第几个位置的符号：
+    val e = "呵呵，你好"(3)
+    val g = BigInt("2343423234") // 2343423234
+    println(e) // 你
+    println(g)
+    // * 上面这些方法，均是.apply() 方法的简写
+    val f = "来啊，相互伤害啊".apply(4)
+    val h = BigInt.apply("234234234")
+    println(f) // 互
+    println(h) // 234234234
+
+
+
   }
 }
