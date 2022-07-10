@@ -1,4 +1,5 @@
 package chapter06_funtion
+import math._
 
 object function_as_params_and_returns {
   def main(args: Array[String]): Unit = {
@@ -6,7 +7,7 @@ object function_as_params_and_returns {
     def fn(n:Int) = {
       println (n)
     }
-    // 直接执行：
+    // 直接执行：() 括号可省略：
     val result = fn(123)
     result
     // 123
@@ -15,7 +16,7 @@ object function_as_params_and_returns {
     val f2 = fn _
     // or
     val f3 = fn(_)
-    // or
+    // or 如果采用以上简写，则须指定函数执行类型，否则报错：
     val f4: Int => Unit = fn
     // 直接打印会打印出函数内存地址：
     println(f2) // chapter06_funtion.Lamda_func$$$Lambda$13/483422889@4c203ea1

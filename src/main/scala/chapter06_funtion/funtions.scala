@@ -14,8 +14,27 @@ object funtions {
       s"$num1 $num"
     }
     // 可变参数传入为集合类型
-    println(f1(1,23,4))
-    // 1 WrappedArray(23, 4)
+    println(f1(1,23,4)) // 1 WrappedArray(23, 4)
+
+    def sum1(args: Int*):Int = {
+      var result = 0
+      for (arg <- args) result += arg
+      result
+    }
+    val sum1Result = sum1(78,25,23,52,6)
+    println(sum1Result) // 184
+
+    // 用上 to 的骚操作，必须: _*，才会将 1 to 5 作为序列化处理：
+    val s = sum1(1 to 5: _*)
+    println(s) // 15
+
+    // 如是递归函数，则一定要规定返回值类型，否则报错：
+    def recursivSum(args: Int*):Int = {
+      if (args.length == 0) 0
+      else args.head + recursivSum(args.tail: _*)
+    }
+    val res = recursivSum(34,41,54,22)
+    println(res) // 151
 
     // 3. 默认值
     def f2(name: String="s", age: String):String = s"$name is $age"
