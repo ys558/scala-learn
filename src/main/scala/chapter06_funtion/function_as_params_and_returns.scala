@@ -47,5 +47,11 @@ object function_as_params_and_returns {
     // 以上调用方法可以简化为：
     f5()(777) // f6被调用了，777
 
+    //  4. 传名参数
+    // 和js一样，scala的传参除了值，还可以是函数, 如：
+    // ! 传参中 => Int 表示传入的函数为返回值为Int类型，而该函数无传入参数：
+    def f7 (params: => Int) = println(s"传入参数为：$params")
+    val f8 = () => 18
+    f7(f8()) // 传入参数为：18
   }
 }
