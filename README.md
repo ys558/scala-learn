@@ -18,6 +18,14 @@ object varAndVal {
 }
 ```
 
+### 变量默认值 _
+
+```scala
+var a: String = _ // ""
+var b: Int = _ // 0
+var c: Double = _ // 0.0
+```
+
 ### 包对象
 
 - 包对象就是在文件夹里，和文件夹同名的`package`称为包对象，作为对应包下的所有scala和object，可以直接访问
